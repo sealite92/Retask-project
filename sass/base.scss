@@ -1,0 +1,100 @@
+$color-primary: #4fc1b1;
+$color-primary-light: #8cf5e3;
+
+
+$color-grey-light-1: #eef1f8;
+$color-grey-light-3: #f4f3f3;
+$color-grey-light-4: #33383e;
+$color-grey-light-5: #b3b3b3;
+$color-grey-light-2: #d9d9d9;
+
+$color-grey-dark-1: #4d4b49f8;
+$color-grey-dark-2: #1111102c;
+
+$bp-extra-largest: 91.25em; ///1460px
+$bp-ex-largest: 81.25em; ///1300px
+$bp-largest: 75em; ///1200px
+$bp-large: 62.5em; ///1000px
+$bp-large-1: 59.38em; ///950px
+$bp-medium: 50em; ///800px
+$bp-medium-1: 47.5em; ///760px
+$bp-small: 37.5em; ///600px
+
+
+.heading1 {
+  font-size: .2rem;
+  font-weight: 600;
+  color: $color-grey-light-4;
+}
+
+
+
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background-color: #4fc1b1;
+  color: $color-grey-light-4;
+
+  @media only screen and (max-width: $bp-extra-largest) {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: $bp-ex-largest) {
+    font-size: 52.25%;
+  }
+
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-medium-1) {
+    font-size: 52.25%;
+  }
+
+}
+
+.container {
+  margin: 6rem 8rem;
+  padding: 2rem;
+  background-color: $color-grey-light-1;
+  border-radius: 50px;
+
+
+  display: grid;
+  // grid-template-columns: [sidebar-start]20rem [side-bar-end full-start]minmax(min-content, max-content) [main-start]minmax(min-content, max-content)[main-end status-start] minmax(min-content, max-content) [status-end] 1fr [full-end];
+  grid-template-columns: 1fr 5fr 2fr;
+  // grid-template-rows: minmax(min-content, max-content), 1rem;
+  grid-template-rows: 1fr 4fr;
+  column-gap: 2.5rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    grid-template-columns: 6fr 1fr 2fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    row-gap: 2rem;
+    padding: 4rem;
+  }
+
+  @media only screen and (max-width: $bp-large-1) {
+    grid-template-columns: minmax(min-content, max-content);
+    grid-row: auto;
+    overflow-x: scroll;
+  }
+
+  @media only screen and (max-width: $bp-medium-1) {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-row: 2rem;
+  }
+
+}

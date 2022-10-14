@@ -1,0 +1,110 @@
+.calender {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  grid-row: 2/-1;
+  background-color: #fff;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.calender__time-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  border-bottom: 1px solid grey;
+}
+
+.calender-timeline {
+  margin-right: auto;
+}
+
+.calender__months {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem;
+}
+
+.calender__days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.calender__week-day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: .5rem;
+}
+
+.calender__week-date {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.calender__tasks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+  margin-top: 1rem;
+}
+
+.calender__tasks .container {
+  overflow-y: scroll;
+}
+
+.calender__tasks-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #f0f0f0;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  gap: 2rem;
+  width: 90%;
+}
+
+.heading-task {
+  margin-left: auto;
+  color: #fff;
+}
+/*# sourceMappingURL=calender.css.map */
