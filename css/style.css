@@ -28,6 +28,9 @@ html {
   @media only screen and (max-width: 47.5em) {
     html {
       font-size: 52.25%; } }
+  @media only screen and (max-width: 31.25em) {
+    html {
+      background-color: #f4f3f3; } }
 
 .container {
   margin: 6rem 8rem;
@@ -53,6 +56,11 @@ html {
     .container {
       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
       grid-row: 2rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .container {
+      margin: auto;
+      padding: 1rem;
+      overflow-x: hidden; } }
 
 .heading1 {
   font-size: 3rem;
@@ -186,9 +194,7 @@ html {
     .calender {
       grid-row: 2/3;
       width: auto;
-      overflow-x: auto;
-      margin-top: -8rem;
-      scroll: hidden; } }
+      margin-top: -8rem; } }
   .calender__time-line {
     display: flex;
     align-items: center;
@@ -232,6 +238,13 @@ html {
     @media only screen and (max-width: 59.38em) {
       .calender__months {
         width: max-content; } }
+    @media only screen and (max-width: 47.5em) {
+      .calender__months {
+        font-size: 2rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .calender__months {
+        gap: 4rem;
+        overflow-x: auto; } }
     .calender__months::after {
       content: "";
       width: 2px;
@@ -400,6 +413,11 @@ html {
   @media only screen and (max-width: 59.38em) {
     .status {
       justify-content: center; } }
+  @media only screen and (max-width: 31.25em) {
+    .status {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; } }
   .status::before {
     content: "";
     height: 1px;
@@ -425,6 +443,11 @@ html {
     @media only screen and (max-width: 75em) {
       .status__main {
         margin-top: 6.35rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .status__main {
+        width: auto;
+        flex-grow: 1;
+        align-items: stretch; } }
   .status__box {
     display: flex;
     flex-direction: column;
@@ -540,6 +563,12 @@ html {
   @media only screen and (max-width: 59.38em) {
     .sidebar {
       grid-column: 1/-1; } }
+  @media only screen and (max-width: 31.25em) {
+    .sidebar {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      padding: 2rem 1rem;
+      margin-top: 2rem; } }
   .sidebar::after {
     position: absolute; }
   .sidebar__main {

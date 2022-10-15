@@ -20,9 +20,9 @@
 
     grid-row: 2/3;
     width: auto;
-    overflow-x: auto;
+    // overflow-x: auto;
     margin-top: -8rem;
-    scroll: hidden;
+
   }
 
   // height: min-content;
@@ -103,6 +103,15 @@
     @media only screen and (max-width: $bp-large-1) {
       width: max-content;
 
+    }
+
+    @media only screen and (max-width: $bp-medium-1) {
+      font-size: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      gap: 4rem;
+      overflow-x: auto;
     }
 
     &::after {

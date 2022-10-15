@@ -18,7 +18,7 @@ $bp-large: 62.5em; ///1000px
 $bp-large-1: 59.38em; ///950px
 $bp-medium: 50em; ///800px
 $bp-medium-1: 47.5em; ///760px
-$bp-small: 37.5em; ///600px
+$bp-small: 31.25em; ///600px
 
 
 .heading1 {
@@ -63,6 +63,10 @@ html {
     font-size: 52.25%;
   }
 
+  @media only screen and (max-width: $bp-small) {
+    background-color: #f4f3f3;
+  }
+
 }
 
 .container {
@@ -95,6 +99,13 @@ html {
   @media only screen and (max-width: $bp-medium-1) {
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-row: 2rem;
+    // padding: 1rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin: auto;
+    padding: 1rem;
+    overflow-x: hidden;
   }
 
 }
