@@ -59,6 +59,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      background-color: $color-grey-light-3;
+    }
   }
 
   // &__icon {}
@@ -66,6 +72,7 @@
     display: flex;
     gap: .5rem;
     justify-content: space-between;
+
 
     @media only screen and (max-width: $bp-large-1) {
       justify-content: flex-start;
@@ -96,6 +103,7 @@
     border-radius: .5rem;
     padding: .5rem 1rem;
 
+
     @media only screen and (max-width: $bp-medium-1) {
       background-color: #fff;
       border: none;
@@ -108,7 +116,7 @@
     transition: all .2s;
     border-bottom: 1px solid transparent;
     position: relative;
-
+    cursor: pointer;
 
     &:hover,
     &:active,
@@ -135,6 +143,7 @@
     align-items: center;
     background-color: #fff;
     border: none;
+    cursor: pointer;
 
     &-time {
       background-color: $color-grey-light-1;

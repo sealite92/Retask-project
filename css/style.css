@@ -51,7 +51,7 @@ html {
     .container {
       grid-template-columns: minmax(min-content, max-content);
       grid-row: auto;
-      overflow-x: scroll; } }
+      overflow-x: hidden; } }
   @media only screen and (max-width: 47.5em) {
     .container {
       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -59,7 +59,7 @@ html {
   @media only screen and (max-width: 31.25em) {
     .container {
       margin: auto;
-      padding: 1rem;
+      padding: 1.5rem;
       overflow-x: hidden; } }
 
 .heading1 {
@@ -101,7 +101,10 @@ html {
     border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    cursor: pointer; }
+    .header span:hover, .header span:active {
+      background-color: #f4f3f3; }
   .header__nav {
     display: flex;
     gap: .5rem;
@@ -137,7 +140,8 @@ html {
   .header__nav-item {
     transition: all .2s;
     border-bottom: 1px solid transparent;
-    position: relative; }
+    position: relative;
+    cursor: pointer; }
     .header__nav-item:hover, .header__nav-item:active, .header__nav-item-active {
       color: #4fc1b1; }
       .header__nav-item:hover::after, .header__nav-item:active::after, .header__nav-item-active::after {
@@ -153,7 +157,8 @@ html {
     gap: 2rem;
     align-items: center;
     background-color: #fff;
-    border: none; }
+    border: none;
+    cursor: pointer; }
     .header__tracking-time {
       background-color: #eef1f8;
       padding: 1rem 1.5rem;
@@ -173,6 +178,7 @@ html {
 .calender {
   grid-column: 2/3;
   grid-row: 2/-1;
+  overflow-x: hidden;
   background-color: #fff;
   padding: 1rem;
   font-size: 1.2rem;
@@ -180,6 +186,9 @@ html {
   display: flex;
   flex-direction: column;
   color: #33383e; }
+  @media only screen and (max-width: 47.5em) {
+    .calender__year {
+      overflow-x: scroll; } }
   @media only screen and (max-width: 75em) {
     .calender {
       grid-row: 2/3;
@@ -205,6 +214,8 @@ html {
       .calender__time-line {
         justify-content: center;
         width: max-content; } }
+    .calender__time-line h2 {
+      cursor: pointer; }
     .calender__time-line h2:hover {
       color: #4fc1b1;
       position: relative;
@@ -221,7 +232,10 @@ html {
       padding: 1rem 2rem;
       color: #689ede;
       background-color: #eef1f8;
-      border-radius: 5px; }
+      border-radius: 5px;
+      cursor: pointer; }
+      .calender__time-line h4:hover {
+        background-color: #f4f3f3; }
       @media only screen and (max-width: 59.38em) {
         .calender__time-line h4 {
           display: none; } }
@@ -237,14 +251,15 @@ html {
     position: relative; }
     @media only screen and (max-width: 59.38em) {
       .calender__months {
-        width: max-content; } }
+        width: max-content;
+        overflow-x: scroll; } }
     @media only screen and (max-width: 47.5em) {
       .calender__months {
-        font-size: 2rem; } }
+        font-size: 2rem;
+        overflow-x: scroll; } }
     @media only screen and (max-width: 31.25em) {
       .calender__months {
-        gap: 4rem;
-        overflow-x: auto; } }
+        gap: 4rem; } }
     .calender__months::after {
       content: "";
       width: 2px;
@@ -257,7 +272,8 @@ html {
           left: 19%; } }
     .calender__months p {
       padding: .5rem;
-      transition: all .3s; }
+      transition: all .3s;
+      cursor: pointer; }
     .calender__months p:hover, .calender__months-active {
       background-color: #4fc1b1;
       color: #fff;
@@ -272,10 +288,12 @@ html {
     border-bottom: 1px solid #d9d9d9; }
     @media only screen and (max-width: 59.38em) {
       .calender__days {
-        width: max-content; } }
+        width: max-content;
+        overflow-x: scroll; } }
     .calender__days p {
       padding: .5rem;
-      transition: all .3s; }
+      transition: all .3s;
+      cursor: pointer; }
     .calender__days p:hover, .calender__days-active {
       background-color: #4fc1b1;
       color: #fff;
@@ -296,7 +314,8 @@ html {
     display: flex;
     align-items: center;
     gap: 5rem;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    cursor: pointer; }
     @media only screen and (max-width: 47.5em) {
       .calender__tasks {
         flex-direction: column;
@@ -462,7 +481,8 @@ html {
     flex-direction: column;
     padding: 1rem;
     border: 1px solid #d9d9d9;
-    transition: all .2s; }
+    transition: all .2s;
+    cursor: pointer; }
     .status__logo-container--active {
       display: flex;
       flex-direction: column;
@@ -471,7 +491,8 @@ html {
       color: #4fc1b1;
       fill: #4fc1b1;
       stroke: #4fc1b1;
-      transition: all .2s; }
+      transition: all .2s;
+      cursor: pointer; }
     .status__logo-container:hover, .status__logo-container:active {
       color: #4fc1b1;
       fill: #4fc1b1;
@@ -491,12 +512,18 @@ html {
       align-items: center;
       padding: .3rem .6rem;
       width: fit-content;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      cursor: pointer; }
+      .status__services-lists p:hover, .status__services-lists p:active {
+        background-color: #f4f3f3; }
     .status__services-icons {
       display: flex;
       gap: 2rem;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      cursor: pointer; }
+      .status__services-icons:hover, .status__services-icons:active {
+        fill: #4d4b49f8; }
   .status__services-box {
     display: flex;
     align-items: center;
@@ -518,7 +545,10 @@ html {
     width: 4rem;
     stroke: #fff;
     fill: #4fc1b1;
-    z-index: 10; }
+    z-index: 10;
+    cursor: pointer; }
+    .status__icon:hover, .status__icon:active {
+      fill: #8cf5e3; }
   .status__trending {
     display: flex;
     flex-direction: column;
@@ -531,11 +561,14 @@ html {
       border: 1px solid #d9d9d9;
       margin-bottom: 1rem;
       border-radius: 10px;
-      padding: .3rem; }
+      padding: .3rem;
+      cursor: pointer; }
     .status__trending-lists span {
       display: flex;
       align-items: center;
       justify-content: space-between; }
+      .status__trending-lists span:hover, .status__trending-lists span:active {
+        background-color: #f4f3f3; }
 
 .sidebar {
   grid-column: 1/2;
@@ -586,6 +619,7 @@ html {
     .sidebar__main--box {
       display: flex;
       align-items: center;
+      cursor: pointer;
       justify-content: flex-start;
       gap: 2.5rem;
       padding: 1.5rem 2rem;

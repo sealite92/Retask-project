@@ -46,6 +46,12 @@ html {
   }
 }
 
+@media only screen and (max-width: 31.25em) {
+  html {
+    background-color: #f4f3f3;
+  }
+}
+
 .container {
   margin: 6rem 8rem;
   padding: 2rem;
@@ -78,7 +84,7 @@ html {
         grid-template-columns: minmax(-webkit-min-content, -webkit-max-content);
         grid-template-columns: minmax(min-content, max-content);
     grid-row: auto;
-    overflow-x: scroll;
+    overflow-x: hidden;
   }
 }
 
@@ -88,6 +94,14 @@ html {
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     -ms-grid-row: 2;
     grid-row: 2rem;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .container {
+    margin: auto;
+    padding: 1.5rem;
+    overflow-x: hidden;
   }
 }
 /*# sourceMappingURL=base.css.map */

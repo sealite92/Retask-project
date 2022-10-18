@@ -90,6 +90,7 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 2rem;
+
   }
 
 
@@ -97,6 +98,7 @@
   &__logo-containers {
     display: flex;
     gap: 1rem;
+
   }
 
   &__logo-container {
@@ -105,6 +107,7 @@
     padding: 1rem;
     border: 1px solid $color-grey-light-2;
     transition: all .2s;
+    cursor: pointer;
 
     &--active {
       display: flex;
@@ -115,6 +118,7 @@
       fill: $color-primary;
       stroke: $color-primary;
       transition: all .2s;
+      cursor: pointer;
     }
 
     &:hover,
@@ -149,6 +153,12 @@
         padding: .3rem .6rem;
         width: fit-content;
         margin-bottom: 1rem;
+        cursor: pointer;
+
+        &:hover,
+        &:active {
+          background-color: $color-grey-light-3;
+        }
       }
     }
 
@@ -157,6 +167,12 @@
       gap: 2rem;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
+
+      &:hover,
+      &:active {
+        fill: $color-grey-dark-1;
+      }
     }
   }
 
@@ -199,6 +215,12 @@
     stroke: #fff;
     fill: $color-primary;
     z-index: 10;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      fill: $color-primary-light;
+    }
   }
 
   &__trending {
@@ -219,6 +241,7 @@
         margin-bottom: 1rem;
         border-radius: 10px;
         padding: .3rem;
+        cursor: pointer;
       }
 
       span {
@@ -226,6 +249,11 @@
         align-items: center;
         justify-content: space-between;
 
+
+        &:hover,
+        &:active {
+          background-color: $color-grey-light-3;
+        }
       }
     }
   }
